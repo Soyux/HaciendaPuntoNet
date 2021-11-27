@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaciendaPuntoNET", "HaciendaPuntoNET\HaciendaPuntoNET.csproj", "{513A7E74-4E2C-4CBD-86E6-B1C824C28A4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox", "Toolbox\Toolbox.csproj", "{CA373127-7E09-4C48-932D-C42D9AE3D3A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{513A7E74-4E2C-4CBD-86E6-B1C824C28A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513A7E74-4E2C-4CBD-86E6-B1C824C28A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513A7E74-4E2C-4CBD-86E6-B1C824C28A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513A7E74-4E2C-4CBD-86E6-B1C824C28A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA373127-7E09-4C48-932D-C42D9AE3D3A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA373127-7E09-4C48-932D-C42D9AE3D3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA373127-7E09-4C48-932D-C42D9AE3D3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA373127-7E09-4C48-932D-C42D9AE3D3A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59577A0B-6186-4CE0-A0E2-AFC8353148EC}
+	EndGlobalSection
+EndGlobal
