@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Responses\" />
+    <Folder Include="Requests\4_2\" />
+    <Folder Include="Requests\v4_4\" />
+    <Folder Include="Responses\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MHBrokerContracts\MHBrokerContracts.csproj" />
+  </ItemGroup>
+
+</Project>
