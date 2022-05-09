@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Swashbuckle.AspNetCore;
 
 namespace MHBrokerCSharp
 {
@@ -26,6 +27,12 @@ namespace MHBrokerCSharp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen(c =>
+
+                c.SwaggerDoc(name: "v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MHBrokerAPI", Version = "v1" })
+
+            );
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +53,15 @@ namespace MHBrokerCSharp
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c=> 
+                {
+                    c.SwaggerEndpoint(url:"/swagger/v1/swagger.json",name:"MHBroker V1");
+                }
+                
+            );
+
         }
     }
 }

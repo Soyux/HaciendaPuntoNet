@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MHBrokerModels.Requests.v4_3 {
+namespace MHBrokerModels.Requests.v4_3.Documento {
     public struct FacturaElectronica
     {
         

@@ -7,8 +7,7 @@ namespace MHBrokerContracts.Requests.v4_3.IDocumento.Resumen
     public interface ICodigoTipoMoneda
     {
         public string CodigoMoneda { get; set; }
-        public double TipoCambio { get; set; }
-        
+        public double TipoCambio { get; set; }        
     }//end of interface
 
 }//end of namespace

@@ -1,18 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Requests\4_2\**" />
+    <Compile Remove="Requests\v4_4\**" />
+    <EmbeddedResource Remove="Requests\4_2\**" />
+    <EmbeddedResource Remove="Requests\v4_4\**" />
+    <None Remove="Requests\4_2\**" />
+    <None Remove="Requests\v4_4\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Responses\" />
-    <Folder Include="Requests\4_2\" />
-    <Folder Include="Requests\v4_4\" />
     <Folder Include="Responses\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MHBrokerContracts\MHBrokerContracts.csproj" />
+    <ProjectReference Include="..\Toolbox\Toolbox.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,17 +4,24 @@ using System.IO;
 using System.Text;
 using System.Text.Json.Serialization; 
 using Newtonsoft.Json;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
+using Toolbox.Contracts;
 
 namespace Toolbox
 {
-    public class MasterJSON
+    public class MasterJSON : IMasterJSON 
     {
+        IMasterHTTP mhttp;
+
+        public MasterJSON(IMasterHTTP mhttp) { 
+            this.mhttp = mhttp;
+        }//end of MasterJSON
+
         public string PostJSON(string url, dynamic requestItem)
         {
             string request = JsonConvert.SerializeObject(requestItem);
-            var webhelper = new MasterHTTP(url, "POST", request, true);
-            string response = webhelper.GetResponse();
+            mhttp.Setup(url, "POST", request, true);
+            string response = mhttp.GetResponse();
 
             return response;
         }
@@ -22,25 +29,24 @@ namespace Toolbox
         public async Task<string> PostJSONAsync(string url, dynamic requestItem)
         {
             string request = JsonConvert.SerializeObject(requestItem);
-            var webhelper = new MasterHTTP(url, "POST", request, true);
-            string response = await webhelper.GetResponseAsync();
+            mhttp.Setup(url, "POST", request, true);
+            string response = await mhttp.GetResponseAsync();
 
             return response;
         }
 
         public async Task<string> GetJSONAsync(string url)
         { 
-            var webhelper = new MasterHTTP(url, "GET");
-            string response = await webhelper.GetResponseAsync();
+            mhttp.Setup(url, "GET");
+            string response = await mhttp.GetResponseAsync();
             return response;
         }
 
-        private JsonTextReader reader;
+        JsonTextReader reader { get; set; }
+        
         public void LoadJSON(string originalJSON)
         {
-
             reader = new JsonTextReader(new StringReader(originalJSON));
-
         }
 
         public string LookupItem(string searchParam)
@@ -80,8 +86,6 @@ namespace Toolbox
 
             //return response;
         }
-
-       
 
         public dynamic DeconvertJSONToDynamic(string jsonresponse)
         {

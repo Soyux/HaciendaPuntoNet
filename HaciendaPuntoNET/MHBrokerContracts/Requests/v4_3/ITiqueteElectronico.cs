@@ -7,10 +7,13 @@ using MHBrokerContracts.Requests.v4_3.IDocumento.Encabezado;
 
 namespace MHBrokerContracts.Requests.v4_3
 {
-    public interface ITiqueteElectronico:
-        IDocumentoEncabezado,IDocumentoDetalle,IDocumentoResumen
+    public interface ITiqueteElectronico
     {
+        public IDocumentoEncabezadoSinReceptor encabezado { get; set; }
+        public IDocumentoDetalle detalle{ get; set; }
+        public IDocumentoResumen resumen{ get; set; }
 
     }//end of interface
+
 
 }//end of namespace
