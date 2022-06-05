@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Requests\4_2\**" />
+    <EmbeddedResource Remove="Requests\4_2\**" />
+    <None Remove="Requests\4_2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MHBrokerContracts\MHBrokerContracts.csproj" />
+    <ProjectReference Include="..\MHBrokerUtilities\MHBrokerUtilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Connectivity\" />
+    <Folder Include="Responses\" />
+    <Folder Include="Requests\v4_4\" />
+  </ItemGroup>
+
+</Project>

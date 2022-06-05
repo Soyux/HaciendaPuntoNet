@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirmaXades.Net" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\MemoryVault\MemoryVault\MemoryVault.csproj" />
+    <ProjectReference Include="..\MHBrokerIO\MHBrokerIO.csproj" />
+    <ProjectReference Include="..\MHBrokerModels\MHBrokerModels.csproj" />
+    <ProjectReference Include="..\MHBrokerUtilities\MHBrokerUtilities.csproj" />
+  </ItemGroup>
+
+</Project>
